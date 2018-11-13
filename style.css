@@ -1,0 +1,498 @@
+/* Classes Iniciais do body e root */
+
+* {
+
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+:root {
+
+  --cor-padrao: linear-gradient(#000038, #6E0048);
+  --cor-azul: #000038;
+  --cor-lilas: #6E0048;
+  --cor-amarelo: #FFE928;
+
+}
+
+a {
+
+  text-decoration: none;
+
+}
+
+/* classe comuns que são reutilizadas em todo código */
+
+
+.color-section {
+
+  background: var(--cor-padrao);
+  color: white;
+}
+
+.grid {
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+
+}
+
+.grid-center {
+
+  justify-items: center;
+
+}
+
+.row {
+
+  display: flex;
+
+}
+
+.separados{
+
+  justify-content: space-between;
+
+}
+
+.centralizado {
+
+  justify-content: space-around;
+
+}
+
+.meio {
+
+  align-items: center;
+
+}
+
+.central {
+
+  grid-column: 2 / 3;
+
+}
+
+.text-center {
+
+  text-align: center;
+
+}
+
+.text-left {
+
+  text-align: left;
+
+}
+
+.text-right {
+
+  text-align: right;
+}
+
+.marginTop {
+
+  margin-top: 20px;
+
+}
+
+
+.marginTopBottom {
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.adorno {
+
+  width: 50px;
+
+}
+
+.buttom {
+
+  padding: 10px;
+  background-color: var(--cor-amarelo);
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+/* CLASSES DE ESTILIZACÃO DO BODY */
+
+#grid-body{
+
+  display: grid;
+  grid-template-columns: 1fr minmax(400px, 7fr) 1fr;
+
+}
+
+.section {
+
+  grid-column: 1 / 4;
+
+}
+
+/* Estilizacão da home */
+
+#home {
+
+  height: 100vh;
+
+}
+
+.menu {
+
+  background: rgba(17, 17, 37, 1);
+  grid-column: 1 / 4;
+  height: 50px;
+}
+
+.menu ul {
+
+  display: flex;
+  list-style-type: none;
+
+}
+
+.menu ul li {
+
+  padding: 1em 1em;
+
+}
+
+div#home img {
+
+  width: 50%;
+  margin: 0 auto;
+  grid-column: 1 / 4;
+
+}
+
+/* Estilizacão das postagens -- Area do BLOG -- */
+
+#blog {
+
+  height: 700px
+}
+
+#blog-categorias {
+
+  margin: 50px 0;
+}
+
+#grid-postagens {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+
+
+}
+
+#postagem-atual {
+
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background: #000038;
+  border-radius: 10px;
+  color: white;
+}
+
+.postagem {
+
+  grid-column: 2 / 3;
+  background: #000038;
+  border-radius: 10px;
+  color: white;
+}
+
+.link-ler_mais{
+
+  color: #FFE928;
+  padding: 0.2em;
+  border: 0.2em solid #FFE928;
+  border-radius: 10%;
+}
+
+#link-visitar_blog {
+
+
+}
+
+/* Estilizando área do banner sobre Coach */
+
+#banner-coach {
+
+  background-image: url(img/bg-banner.png);
+  height: 400px;
+
+}
+
+/* Estilizacao da área o que é coach */
+
+#area_coach {
+
+  margin: 50px 0;
+}
+
+
+#titulo_coach {
+
+  text-transform: uppercase;
+}
+
+#desc_coach {
+
+  width: 80ch;
+}
+
+
+#titulo_int {
+
+  padding: 0.2em 1em;
+  margin-left: -350px;
+  background-color: var(--cor-lilas);
+  color: white;
+  border-radius: 0 5px 5px 0;
+  text-transform: uppercase;
+
+}
+
+#desc_integral {
+
+  width: 30ch;
+
+}
+
+#titulo_sis {
+
+  padding: 0.2em 1em;
+  margin-right: -350px;
+  background-color: var(--cor-azul);
+  color: white;
+  border-radius: 5px 0 0 5px;
+  text-transform: uppercase;
+
+}
+
+#desc_sistemico{
+
+  width: 30ch;
+}
+
+/* Estilizacao da chamada para treinamentos */
+
+
+#treinamento_content{
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+h2#titulo_chamada-treinamento{
+
+  width: 14ch;
+  text-align: center;
+
+}
+
+p#desc_chamada-treinamento {
+
+  width: 50ch;
+  text-align: justify;
+
+}
+
+/* Estilizacao da área da agenda */
+
+#area_agenda {
+
+  height: 300px;
+}
+
+/* Estilizacao da área que fala sobre as Irmas */
+
+#perfil {
+
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-auto-rows:100px auto;
+  grid-template-areas:
+  ". perfilKalina perfilCarla ."
+  ". descKalina descCarla ."
+}
+
+#area_kalina{
+
+
+  background-color: var(--cor-azul);
+  grid-column: 1/3;
+  grid-row: 1/3;
+  z-index: 1;
+}
+
+#area_carla {
+
+  background-color: var(--cor-lilas);
+  grid-column: 3/5;
+  grid-row: 1/3;
+  z-index: 1;
+}
+
+
+#perfil_kalina{
+
+  grid-area: perfilKalina;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  align-items: center;
+
+}
+
+#nome-kalina {
+
+  background-color: var(--cor-lilas);
+  height: 90%;
+  width: 80%;
+  grid-column: 2/4;
+  grid-row: 2/3;
+  z-index: 1;
+  justify-self: scratch;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+img.img_perfil:nth-child(1) {
+
+  grid-column: 1/3;
+  grid-row: 1/4;
+  z-index: 10;
+
+
+}
+
+#desc_kalina {
+
+  grid-area: descKalina;
+  z-index: 10;
+  margin-right: 2em;
+
+}
+
+#perfil_carla {
+
+  grid-area: perfilCarla;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  align-items: center;
+
+}
+
+#nome-carla {
+
+  background-color: var(--cor-azul);
+  height: 90%;
+  width: 80%;
+  grid-column: 2/4;
+  grid-row: 2/3;
+  z-index: 1;
+  justify-self: scratch;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+img.img_perfil:nth-child(2) {
+
+  grid-column: 3/5;
+  grid-row: 1/4;
+  z-index: 10;
+
+}
+
+#desc_carla {
+
+  grid-area: descCarla;
+  z-index: 10;
+  margin-left: 5em;
+
+}
+
+.img_perfil {
+
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+}
+
+.nome_perfil {
+
+  text-align: center;
+  width: 7ch;
+  margin: 5px 0;
+}
+
+.desc_perfil {
+
+  width: 80%;
+  text-align: justify;
+}
+
+
+/* Estilizacao dos destaques da loja virtual */
+
+#lojavirtual {
+
+  height: 300px;
+
+}
+
+/* Estilizaćao do footer!! */
+
+
+.menu-footer {
+
+  grid-column: 1 / 4;
+  height: 50px;
+}
+
+.menu-footer ul {
+
+  display: flex;
+  list-style-type: none;
+
+}
+
+.menu-footer ul li {
+
+  padding: 1em 1em;
+
+}
+
+#rodape{
+
+  background: rgba(17, 17, 37, 1);
+  grid-column: 1/4;
+
+}
