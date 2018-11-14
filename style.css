@@ -1,3 +1,16 @@
+/*
+Theme Name: Irmas Aquino - Theme
+Theme URI: https://www.irmasaquino.com.br
+Author: Rodolfo Marques e Nathalia Clementino
+Author URI:
+Description: Tema desenvolvido para o ite das Coach Integral Sistêmico: Irmãs Aquino
+Version: 1.0
+Text Domain: irmasaquinotheme
+*/
+
+
+
+
 /* Classes Iniciais do body e root */
 
 * {
@@ -334,7 +347,7 @@ p#desc_chamada-treinamento {
 
 #area_agenda {
 
-  height: 300px;
+  height: 600px;
 }
 
 /* Estilizacao da área que fala sobre as Irmas */

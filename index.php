@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Nathalia Clementino e Rodolfo Marques">
-    <meta name="description" content="Site das Coach Integral Sistêmico: Irmãs Aquino" >
-    <meta name="keywords" content="Irmãs Aquino, Coach Integral Sistêmico, Coach, João Pessoa">
-    <meta name="theme-color" content="#000038">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#000038">
-    <meta name="msapplication-navbutton-color" content="#000038">
 
-    <link rel="stylesheet" href="style.css">
-    <title>Irmãs Aquino</title>
-  </head>
-
+<?php get_header();?>
   <body>
 
     <div id="grid-body"> <!-- grid de toda a pagina -->
@@ -31,7 +17,7 @@
             <li>Pesquisa</li>
           </ul>
         </div>
-        <img src="img/logo.png" alt="Irmas Aquino Logo">
+        <img src="<?php bloginfo('template_url')?>/img/logo.png" alt="Irmas Aquino Logo">
       </div>
       <div class="section grid" id="blog"> <!-- Área das postagens recentes do blog -->
         <div class="central">
@@ -73,7 +59,7 @@
         </div>
       </div>
       <div class="central grid grid-center" id="area_coach"> <!-- Área sobre o que é Coach -->
-        <img src="img/adorno.png" alt="" class="adorno central">
+        <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno central">
         <div class="central">
           <div class="row central centralizado marginTopBottom">
             <div>
@@ -121,9 +107,9 @@
               <img src="#" alt="">
             </div>
             <div class="marginTopBottom" id="treinamento_content">
-              <!-- <img src="img/adorno.png" alt="" class="adorno"> -->
+              <!-- <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno"> -->
               <h2 id="titulo_chamada-treinamento">Um treinamento que vai mudar a sua vida</h2>
-              <!-- <img src="img/adorno.png" alt="" class="adorno"> -->
+              <!-- <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno"> -->
               <p id="desc_chamada-treinamento" class="marginTopBottom"> Lorem ipsum dolor sit amet, consectetur
                 adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -136,9 +122,9 @@
       </div>
       <div class="section grid" id="area_agenda"> <!-- Área da agenda -->
         <div class="central grid grid-center">
-          <img src="img/adorno.png" alt="" class="adorno central">
+          <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno central">
           <h2 class="text-center central">Agenda</h2>
-
+          <?php dynamic_sidebar('agenda');?>
         </div>
       </div>
       <div class="section color-section" id="perfil"> <!-- Área que fala sobre as irmãs -->
@@ -149,9 +135,9 @@
           <div id="perfil_kalina">
             <img src="https://picsum.photos/300/300?image=1074" alt="" class="img_perfil">
             <div id="nome-kalina">
-              <img src="img/adorno.png" alt="" class="adorno">
+              <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno">
               <h2 class="nome_perfil">Kalina Aquino</h2>
-              <img src="img/adorno.png" alt="" class="adorno">
+              <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno">
             </div>
           </div>
           <p class="desc_perfil" id="desc_kalina"> Possui formação em Coaching Integral Sistêmico
@@ -169,9 +155,9 @@
           </div>
           <div id="perfil_carla">
             <div id="nome-carla">
-                <img src="img/adorno.png" alt="" class="adorno">
+                <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno">
               <h2 class="nome_perfil">Carla Aquino</h2>
-                <img src="img/adorno.png" alt="" class="adorno">
+                <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno">
             </div>
 
             <img src="https://picsum.photos/300/300?image=1074" alt="" class="img_perfil">
@@ -191,7 +177,7 @@
       </div>
       <div class="section" id="lojavirtual"> <!-- Área de destaque da loja virtual -->
         <div class="central  grid grid-center">
-          <img src="img/adorno.png" alt="" class="adorno central">
+          <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno central">
           <h2 class="central">Destaques da Loja Virtal</h2>
           <div class="central">
 
@@ -220,7 +206,7 @@
       <div class="section grid"> <!-- Área das redes sociais -->
         <div class="central" id="redes-container">
           <div id="chamda-redes">
-            <img src="img/adorno.png" alt="" class="adorno central">
+            <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno central">
             <h2 id="titulo_redes-sociais">Acompanhe Nossas Redes Sociais</h2>
             <div class="icones-redes">
               <img src="#" alt="">
@@ -228,12 +214,7 @@
               <img src="#" alt="">
             </div>
           </div>
-          <div id="instagram-posts">
-            asdfasdfasd
-          </div>
-          <div id="facebook-posts">
-            sdfasdfasdf
-          </div>
+
         </div>
       </div>
       <div class="section color-section grid"> <!-- Footer do site -->
@@ -244,7 +225,7 @@
             <h2>10 passos para ter uma carreira de sucesso</h2>
           </div>
           <div id="form-ebook">
-
+            <?php dynamic_sidebar('redes');?>
           </div>
         </div>
         <div class="menu-footer central grid">
@@ -264,5 +245,5 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+
+    <?php get_footer();?>
