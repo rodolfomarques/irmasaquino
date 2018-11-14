@@ -200,6 +200,11 @@ div#home img {
   background: #000038;
   border-radius: 10px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2em;
+  text-transform: capitalize;
 }
 
 .postagem {
@@ -208,14 +213,28 @@ div#home img {
   background: #000038;
   border-radius: 10px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5em 2em;
+  text-transform: capitalize;
 }
+
 
 .link-ler_mais{
 
   color: #FFE928;
-  padding: 0.2em;
-  border: 0.2em solid #FFE928;
+  padding: 0.2em 0.4em;
+  border: 1px solid #FFE928;
   border-radius: 10%;
+}
+
+div#grid-postagens div h3 {
+
+  font-size: 1.5em;
+  width: 30ch;
+  border-left: 3px solid var(--cor-amarelo);
+  padding-left: 1em;
 }
 
 #link-visitar_blog {
@@ -503,6 +522,10 @@ img.img_perfil:nth-child(2) {
   z-index: 10;
   color: white;
   justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -513,6 +536,10 @@ img.img_perfil:nth-child(2) {
   z-index: 10;
   color: white;
   justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -524,21 +551,142 @@ div#area_citacoes.section img {
   z-index: 10;
 }
 
+div#citacao-esquerda p.citacao {
 
+  background-color: var(--cor-lilas);
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 17ch;
+  text-align: center;
+  }
+
+div#citacao-esquerda p.autor {
+
+  background-color: var(--cor-lilas);
+  border-radius: 2px;
+  width: 10ch;
+  margin-top: 1px;
+  padding: 5px 5px;
+  text-align: center;
+
+}
+
+div#citacao-direita p.citacao {
+
+  background-color: var(--cor-azul);
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 17ch;
+  text-align: center;
+  }
+
+div#citacao-direita p.autor {
+
+  background-color: var(--cor-azul);
+  border-radius: 2px;
+  width: 10ch;
+  margin-top: 1px;
+  padding: 5px 5px;
+  text-align: center;
+
+}
+
+/* Estilizando as redes sociais */
+
+#redes-container {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+#chamada-redes {
+
+  display: flex;
+  flex-direction: column;
+  align-items: space-around ;
+  justify-content: center;
+
+}
+
+#titulo_redes-sociais {
+
+  color: var(--cor-azul);
+  width: 17ch;
+  text-transform: uppercase;
+  text-align: center;
+
+}
 
 /* Estilizaćao do footer!! */
 
+#footer-content {
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+  "img chamada-ebook"
+  "img form-ebook";
+
+}
+
+#img-ebook {
+
+  grid-area: img;
+  width: 90%;
+  height: 90%;
+  align-self: center;
+  justify-self: end;
+
+}
+
+
+div#chamada-ebook {
+
+  align-self: center;
+  justify-self:center;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+div#chamada-ebook h2:nth-child(1){
+
+  color: var(--cor-amarelo);
+  width: 10ch;
+  text-align: right;
+  text-transform: uppercase;
+  padding-right: 1em;
+}
+
+div#chamada-ebook h2:nth-child(2){
+
+  width: 30ch;
+  text-align: left;
+  text-transform: uppercase;
+  padding-left: 1em;
+  border-left: 5px solid var(--cor-azul);
+}
+
+.logo-footer {
+
+  width: 150px;
+
+}
 
 .menu-footer {
 
   grid-column: 1 / 4;
-  height: 50px;
+  height: 100px;
 }
 
 .menu-footer ul {
 
   display: flex;
   list-style-type: none;
+  align-items: center;
 
 }
 
