@@ -47,7 +47,7 @@ a {
 .grid {
 
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr minmax(300px, 2fr) 1fr;
 
 }
 
@@ -166,14 +166,28 @@ a {
 
   display: flex;
   list-style-type: none;
+  justify-self: center;
 
 }
 
 .menu ul li {
 
   padding: 1em 1em;
+  text-transform: uppercase;
+  color: white;
 
 }
+
+.menu ul li a {
+
+  color: white;
+}
+
+.menu ul li a:visited {
+
+  color: white;
+}
+
 
 div#home img {
 
@@ -187,30 +201,29 @@ div#home img {
 
 #blog {
 
-  height: 700px
+  height: 100%;
+  padding: 100px 0;
 }
 
 #blog-categorias {
 
-  margin: 50px 0;
+  padding-bottom: 50px;
 }
 
 #grid-postagens {
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 200px 200px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fill, 200px);
   grid-column-gap: 2em;
   grid-row-gap: 2em;
-
 
 }
 
 #postagem-atual {
 
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
-  background: #000038;
+  /* grid-column: 1 / 2; */
+  grid-row: span 2;
   border-radius: 10px;
   color: white;
   display: flex;
@@ -222,7 +235,7 @@ div#home img {
 
 .postagem {
 
-  grid-column: 2 / 3;
+  /* grid-column: 2 / 3; */
   background: #000038;
   border-radius: 10px;
   color: white;
@@ -259,7 +272,7 @@ div#grid-postagens div h3 {
 
 #banner-coach {
 
-  background-image: url(img/bg-banner.png);
+  object-fit: cover;
   height: 400px;
 
 }
@@ -268,7 +281,7 @@ div#grid-postagens div h3 {
 
 #area_coach {
 
-  margin: 50px 0;
+  padding: 50px 0;
 }
 
 
@@ -497,6 +510,7 @@ img.img_perfil:nth-child(2) {
 #lojavirtual {
 
   height: 300px;
+  padding: 50px 0;
 
 }
 
@@ -562,6 +576,7 @@ div#area_citacoes.section img {
   grid-row: 1/4;
   justify-self: center;
   z-index: 10;
+  width: 80%;
 }
 
 div#citacao-esquerda p.citacao {
@@ -606,6 +621,12 @@ div#citacao-direita p.autor {
 
 /* Estilizando as redes sociais */
 
+#redessociais {
+
+  padding: 50px 0;
+
+}
+
 #redes-container {
 
   display: flex;
@@ -618,7 +639,7 @@ div#citacao-direita p.autor {
 
   display: flex;
   flex-direction: column;
-  align-items: space-around ;
+  align-items: center ;
   justify-content: center;
 
 }
@@ -648,8 +669,8 @@ div#citacao-direita p.autor {
 #img-ebook {
 
   grid-area: img;
-  width: 90%;
-  height: 90%;
+  width: 164px;
+  height: 200px;
   align-self: center;
   justify-self: end;
 
@@ -681,6 +702,12 @@ div#chamada-ebook h2:nth-child(2){
   text-transform: uppercase;
   padding-left: 1em;
   border-left: 5px solid var(--cor-azul);
+}
+
+#form-ebook {
+
+  justify-self: center;
+
 }
 
 .logo-footer {

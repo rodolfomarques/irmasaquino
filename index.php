@@ -5,18 +5,7 @@
     <div id="grid-body"> <!-- grid de toda a pagina -->
 
       <div class="section color-section grid" id="home"> <!-- Sessão inicial da página -->
-        <div class="menu grid">
-          <ul class="central">
-            <li>Home</li>
-            <li>Sobre</li>
-            <li>Agenda</li>
-            <li>Blog</li>
-            <li>Serviços</li>
-            <li>Loja Virtual</li>
-            <li>Contato</li>
-            <li>Pesquisa</li>
-          </ul>
-        </div>
+        <?php wp_nav_menu( array( 'theme_location' => 'menu-topo', 'menu_class' => 'central', 'container' => 'div', 'container_class' => 'menu grid' ) ); ?>
         <img src="<?php bloginfo('template_url')?>/img/logo.png" alt="Irmas Aquino Logo">
       </div>
       <div class="section grid" id="blog"> <!-- Área das postagens recentes do blog -->
@@ -26,21 +15,21 @@
             <a href="#">Categorias</a>
           </div>
           <div id="grid-postagens"> <!-- postagens mais recentes -->
-            <div id="postagem-atual">
+            <div id="postagem-atual" style="background: url(<?php bloginfo('template_url')?>/img/noticia1.png); background-size: cover; object-fit: cover;">
               <div class="row separados">
                 <h4>12 de outubro de 2018</h4>
                 <a href="#" class="link-ler_mais">ler mais</a>
               </div>
               <h3>5 Segredos para Aumentar a produtividade da sua empresa</h3>
             </div>
-            <div class="postagem">
+            <div class="postagem" style="background: url(<?php bloginfo('template_url')?>/img/noticia2.png); background-size: cover; object-fit: cover;">
               <div class="row separados">
                 <h4>12 de outubro de 2018</h4>
                 <a href="#" class="link-ler_mais">ler mais</a>
               </div>
               <h3>livros que vão ajudar a dar um upgrade na sua vida</h3>
             </div>
-            <div class="postagem">
+            <div class="postagem" style="background: url(<?php bloginfo('template_url')?>/img/noticia3.png); background-size: cover; object-fit: cover;">
               <div class="row separados">
                 <h4>12 de outubro de 2018</h4>
                 <a href="#" class="link-ler_mais">ler mais</a>
@@ -53,13 +42,13 @@
           </div>
         </div>
       </div>
-      <div class="section color-section" id="banner-coach"> <!-- Banner "Coach integral sistemico" -->
+      <div class="section color-section" id="banner-coach" style="background: url(<?php bloginfo('template_url')?>/img/bg-banner.png) center no-repeat"> <!-- Banner "Coach integral sistemico" -->
         <div class="central">
 
         </div>
       </div>
       <div class="central grid grid-center" id="area_coach"> <!-- Área sobre o que é Coach -->
-        <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno central">
+        <img src="<?php bloginfo('template_url')?>/img/adornoroxo.png" alt="" class="adorno central">
         <div class="central">
           <div class="row central centralizado marginTopBottom">
             <div>
@@ -100,16 +89,16 @@
           </div>
         </div>
       </div>
-      <div class="section color-section grid"> <!-- Área de chamada para treinamentos -->
+      <div class="section color-section grid" id="treinamento"> <!-- Área de chamada para treinamentos -->
         <div class="central">
           <div class="row marginTopBottom centralizado" id="">
             <div class="">
               <img src="#" alt="">
             </div>
             <div class="marginTopBottom" id="treinamento_content">
-              <!-- <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno"> -->
+              <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno">
               <h2 id="titulo_chamada-treinamento">Um treinamento que vai mudar a sua vida</h2>
-              <!-- <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno"> -->
+              <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno">
               <p id="desc_chamada-treinamento" class="marginTopBottom"> Lorem ipsum dolor sit amet, consectetur
                 adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -122,7 +111,7 @@
       </div>
       <div class="section grid" id="area_agenda"> <!-- Área da agenda -->
         <div class="central grid grid-center">
-          <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno central">
+          <img src="<?php bloginfo('template_url')?>/img/adornoroxo.png" alt="" class="adorno central">
           <h2 class="text-center central">Agenda</h2>
           <?php dynamic_sidebar('agenda');?>
         </div>
@@ -133,7 +122,7 @@
 
           </div>
           <div id="perfil_kalina">
-            <img src="https://picsum.photos/300/300?image=1074" alt="" class="img_perfil">
+            <img src="<?php bloginfo('template_url')?>/img/calina.png" alt="" class="img_perfil">
             <div id="nome-kalina">
               <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno">
               <h2 class="nome_perfil">Kalina Aquino</h2>
@@ -160,7 +149,7 @@
                 <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno">
             </div>
 
-            <img src="https://picsum.photos/300/300?image=1074" alt="" class="img_perfil">
+            <img src="<?php bloginfo('template_url')?>/img/carla.png" alt="" class="img_perfil">
           </div>
           <p class="desc_perfil" id="desc_carla">Possui formação em Marketing pela Faculdade
             Instituto Paraibano de Ensino Renovado INPER e
@@ -177,7 +166,7 @@
       </div>
       <div class="section" id="lojavirtual"> <!-- Área de destaque da loja virtual -->
         <div class="central  grid grid-center">
-          <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno central">
+          <img src="<?php bloginfo('template_url')?>/img/adornoroxo.png" alt="" class="adorno central">
           <h2 class="central">Destaques da Loja Virtal</h2>
           <div class="central">
 
@@ -200,13 +189,13 @@
           <p class="citacao">asudfhl asdhflmakj sdhflakjdh flmakjh</p>
           <p class="autor"> John Doe </p>
         </div>
-        <img src="https://picsum.photos/300/400?image=1031" alt=""> <!-- imagem central  -->
+        <img src="<?php bloginfo('template_url')?>/img/depoimentos.png" alt=""> <!-- imagem central  -->
 
       </div>
-      <div class="section grid"> <!-- Área das redes sociais -->
+      <div class="section grid" id="redessociais"> <!-- Área das redes sociais -->
         <div class="central" id="redes-container">
-          <div id="chamda-redes">
-            <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno central">
+          <div id="chamada-redes">
+            <img src="<?php bloginfo('template_url')?>/img/adornoroxo.png" alt="" class="adorno">
             <h2 id="titulo_redes-sociais">Acompanhe Nossas Redes Sociais</h2>
             <div class="icones-redes">
               <img src="#" alt="">
@@ -214,31 +203,23 @@
               <img src="#" alt="">
             </div>
           </div>
-
+          <?php dynamic_sidebar('redes');?>
         </div>
       </div>
       <div class="section color-section grid"> <!-- Footer do site -->
         <div id="footer-content" class="central marginTopBottom" >
-          <img src="https://picsum.photos/200/300?image=0" alt="" id="img-ebook">
+          <img src="<?php bloginfo('template_url')?>/img/ebook.png" alt="" id="img-ebook">
           <div id="chamada-ebook">
             <h2>E-book Gratuito</h2>
             <h2>10 passos para ter uma carreira de sucesso</h2>
           </div>
           <div id="form-ebook">
-            <?php dynamic_sidebar('redes');?>
+            <?php $form_widget = new \MailPoet\Form\Widget();
+echo $form_widget->widget(array('form' => 1, 'form_type' => 'php'));?>
           </div>
         </div>
         <div class="menu-footer central grid">
-          <ul class="central">
-            <li>Home</li>
-            <li>Sobre</li>
-            <li>Agenda</li>
-            <li>Blog</li>
-            <li>Serviços</li>
-            <li>Loja Virtual</li>
-            <li>Contato</li>
-            <li>Voltar Topo</li>
-          </ul>
+          <?php wp_nav_menu( array( 'theme_location' => 'menu-rodape', 'menu_class' => 'central' ) ); ?>
         </div>
         <div class="grid" id="rodape">
           <h4 class="central">C&M {Desenvolvimento Web}</h4>
