@@ -289,7 +289,58 @@ div#grid-postagens div h3 {
 #banner-coach {
 
   object-fit: cover;
-  height: 400px;
+  padding: 50px 0 0 0;
+
+}
+
+div#banner-coach div.central.row {
+
+  justify-content: center;
+}
+
+#img_central{
+
+  width: 40%;
+
+}
+
+div#banner_content{
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex: 1 2 280px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+div#banner_content img {
+
+  width: 5vw;
+}
+
+div#banner_content h1 {
+
+  width: 70%;
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+@media (orientation: portrait) {
+
+  div#banner_content h1 {
+
+    width: 70%;
+    text-align: center;
+    font-size: 3vh;
+  }
+
+  div#banner_content img {
+
+    width: 8vh;
+  }
+
 
 }
 
@@ -300,6 +351,14 @@ div#grid-postagens div h3 {
   padding: 50px 0;
 }
 
+#explicacao_coach {
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+}
 
 #titulo_coach {
 
@@ -417,9 +476,30 @@ p#desc_chamada-treinamento {
 
 #area_agenda {
 
-  height: 600px;
+  height: 100%;
+  padding: 50px 0;
 }
 
+#adorno_agenda{
+
+  grid-column: 2;
+  grid-row: 1;
+  padding: 10px 0;
+}
+
+#titulo_agenda {
+
+  grid-column: 2;
+  grid-row: 1;
+  padding: 20px 0;
+}
+
+#sidebars_agenda {
+
+  grid-column: 2;
+  grid-row: 2;
+
+}
 /* Estilizacao da área que fala sobre as Irmas */
 
 #perfil {
@@ -427,7 +507,7 @@ p#desc_chamada-treinamento {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr minmax(300px, 2fr) minmax(300px, 2fr) 1fr;
-  grid-auto-rows:100px auto;
+  grid-auto-rows:200px auto;
   grid-template-areas:
   ". perfilKalina perfilCarla ."
   ". descKalina descCarla ."
@@ -986,6 +1066,12 @@ div#chamada-ebook h2:nth-child(2){
   height: 100px;
 }
 
+.menu-footer div.central {
+
+  justify-self: center;
+
+}
+
 .menu-footer ul {
 
   display: flex;
@@ -1005,4 +1091,9 @@ div#chamada-ebook h2:nth-child(2){
   background: rgba(17, 17, 37, 1);
   grid-column: 1/4;
 
+}
+
+div#rodape h4 {
+
+  justify-self: center;
 }

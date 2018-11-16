@@ -9,52 +9,29 @@
         <img src="<?php bloginfo('template_url')?>/img/logo.png" alt="Irmas Aquino Logo">
       </div>
       <div class="section grid" id="blog"> <!-- Área das postagens recentes do blog -->
-        <div class="central">
-          <div id="blog-categorias">
-            <a href="#">Arquivos</a>
-            <a href="#">Categorias</a>
-          </div>
-          
-          <div id="grid-postagens"> <!-- postagens mais recentes -->
-            <div id="postagem-atual" style="background: url(<?php bloginfo('template_url')?>/img/noticia1.png); background-size: cover; object-fit: cover;">
-              <div class="row separados">
-                <h4>12 de outubro de 2018</h4>
-                <a href="#" class="link-ler_mais">ler mais</a>
-              </div>
-              <h3>5 Segredos para Aumentar a produtividade da sua empresa</h3>
-            </div>
-            <div class="postagem" style="background: url(<?php bloginfo('template_url')?>/img/noticia2.png); background-size: cover; object-fit: cover;">
-              <div class="row separados">
-                <h4>12 de outubro de 2018</h4>
-                <a href="#" class="link-ler_mais">ler mais</a>
-              </div>
-              <h3>livros que vão ajudar a dar um upgrade na sua vida</h3>
-            </div>
-            <div class="postagem" style="background: url(<?php bloginfo('template_url')?>/img/noticia3.png); background-size: cover; object-fit: cover;">
-              <div class="row separados">
-                <h4>12 de outubro de 2018</h4>
-                <a href="#" class="link-ler_mais">ler mais</a>
-              </div>
-              <h3>A importancia do empoderamento feminino no mercado de trabalho</h3>
-            </div>
-          </div>
-          <div class="row centralizado">
-            <a href="#" id="link-visitar_blog" class="marginTop"><h3>Visitar Blog</h3></a>
-          </div>
-        </div>
-      </div>
-      <div class="section color-section" id="banner-coach" style="background: url(<?php bloginfo('template_url')?>/img/bg-banner.png) center no-repeat"> <!-- Banner "Coach integral sistemico" -->
-        <div class="central">
 
+        <!-- chamada em php para o componente blogsection.php  -->
+        <?php get_template_part( 'components/blogsection', 'blogsection' );?>
+
+      </div>
+      <div class="section color-section grid" id="banner-coach" style="background: url(<?php bloginfo('template_url')?>/img/bg-banner.png) center no-repeat"> <!-- Banner "Coach integral sistemico" -->
+        <div class="central row ">
+          <img src="#" alt="">
+          <img src="<?php bloginfo('template_url')?>/img/coach.png" alt="" id="img_central">
+          <div id="banner_content">
+            <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno">
+            <h1>Transforme a sua vida e a do seus funcionários</h1>
+            <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno">
+          </div>
         </div>
       </div>
       <div class="central grid grid-center" id="area_coach"> <!-- Área sobre o que é Coach -->
         <div class="central flexcontainer-width">
           <div class="row central centralizado marginTopBottom">
-            <div>
-                <img src="<?php bloginfo('template_url')?>/img/adornoroxo.png" alt="" class="adorno central">
-              <h2 class="text-center" id="titulo_coach">O que é o Coaching?</h2>
-              <p class="text-center marginTop" id="desc_coach">Coaching é um processo de condução lógica e cognitiva
+            <div id="explicacao_coach">
+              <img src="<?php bloginfo('template_url')?>/img/adornoroxo.png" alt="" class="adorno central">
+              <h2 class="" id="titulo_coach">O que é o Coaching?</h2>
+              <p class=" text-center marginTop" id="desc_coach">Coaching é um processo de condução lógica e cognitiva
               que identifica inicialmente o Estado Atual através de uma
               completa, profunda e constante anamnese. Depois identificar
               os objetivos e aonde a pessoa/organização quer efetivamente
@@ -112,9 +89,11 @@
       </div>
       <div class="section grid" id="area_agenda"> <!-- Área da agenda -->
         <div class="central grid grid-center">
-          <img src="<?php bloginfo('template_url')?>/img/adornoroxo.png" alt="" class="adorno central">
-          <h2 class="text-center central">Agenda</h2>
-          <?php dynamic_sidebar('agenda');?>
+          <img src="<?php bloginfo('template_url')?>/img/adornoroxo.png" alt="" class="adorno" id="adorno_agenda">
+          <h2 class="text-center" id="titulo_agenda">Agenda</h2>
+          <div id="sidebars_agenda">
+              <?php dynamic_sidebar('agenda');?>
+          </div>
         </div>
       </div>
       <div class="section color-section" id="perfil"> <!-- Área que fala sobre as irmãs -->
@@ -171,6 +150,7 @@
           <h2 class="central">Destaques da Loja Virtal</h2>
           <div class="central">
 
+            <?php get_template_part( 'components/woocommerceloop', 'woocommerceloop' );?>
           </div>
           <a href="#" class="buttom central">Ver todas as Ofertas</a>
         </div>

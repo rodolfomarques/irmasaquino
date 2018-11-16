@@ -43,7 +43,4 @@ function sidebars() {
 add_action( 'widgets_init', 'sidebars' );
 
 
-
-
-
 ?>
