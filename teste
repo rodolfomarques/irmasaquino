@@ -1,0 +1,39 @@
+<div id="blog-categorias">
+  <a href="#">Arquivos</a>
+  <a href="#">Categorias</a>
+</div>
+<?php the_title()?>
+<?php the_ID()?>
+
+<?php if (is_single('1')):?>
+<div id="grid-postagens"> <!-- postagens mais recentes -->
+  <div id="postagem-atual" style="background: url(<?php bloginfo('template_url')?>/img/noticia1.png); background-size: cover; object-fit: cover;">
+    <div class="row separados">
+      <h4><?php the_time('F j, Y');?></h4>
+      <a href="#" class="link-ler_mais">ler mais</a>
+    </div>
+    <h3>5 Segredos para Aumentar a produtividade da sua empresa</h3>
+  </div>
+<?php endif;?>
+<?php if (is_single('2')):?>
+  <div class="postagem" style="background: url(<?php bloginfo('template_url')?>/img/noticia2.png); background-size: cover; object-fit: cover;">
+    <div class="row separados">
+      <h4><?php the_time('F j, Y');?></h4>
+      <a href="#" class="link-ler_mais"><?php the_permalink()?></a>
+    </div>
+    <h3><?php the_title()?></h3>
+  </div>
+<?php endif;?>
+<?php if (is_single('3')):?>
+  <div class="postagem" style="background: url(<?php bloginfo('template_url')?>/img/noticia3.png); background-size: cover; object-fit: cover;">
+    <div class="row separados">
+      <h4><?php the_time('F j, Y');?></h4>
+      <a href="#" class="link-ler_mais">ler mais</a>
+    </div>
+    <h3>A importancia do empoderamento feminino no mercado de trabalho</h3>
+  </div>
+  <?php endif;?>
+</div>
+<div class="row centralizado">
+  <a href="#" id="link-visitar_blog" class="marginTop"><h3>Visitar Blog</h3></a>
+</div>

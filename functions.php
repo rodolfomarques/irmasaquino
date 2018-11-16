@@ -1,4 +1,10 @@
 <?php
+
+function my_function_admin_bar(){
+    return false;
+}
+add_filter( 'show_admin_bar' , 'my_function_admin_bar');
+
 // Register Navigation Menus
 function custom_navigation_menus() {
 
@@ -35,6 +41,8 @@ function sidebars() {
 
 }
 add_action( 'widgets_init', 'sidebars' );
+
+
 
 
 

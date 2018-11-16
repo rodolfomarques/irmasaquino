@@ -14,6 +14,7 @@
             <a href="#">Arquivos</a>
             <a href="#">Categorias</a>
           </div>
+          
           <div id="grid-postagens"> <!-- postagens mais recentes -->
             <div id="postagem-atual" style="background: url(<?php bloginfo('template_url')?>/img/noticia1.png); background-size: cover; object-fit: cover;">
               <div class="row separados">
@@ -48,10 +49,10 @@
         </div>
       </div>
       <div class="central grid grid-center" id="area_coach"> <!-- Área sobre o que é Coach -->
-        <img src="<?php bloginfo('template_url')?>/img/adornoroxo.png" alt="" class="adorno central">
-        <div class="central">
+        <div class="central flexcontainer-width">
           <div class="row central centralizado marginTopBottom">
             <div>
+                <img src="<?php bloginfo('template_url')?>/img/adornoroxo.png" alt="" class="adorno central">
               <h2 class="text-center" id="titulo_coach">O que é o Coaching?</h2>
               <p class="text-center marginTop" id="desc_coach">Coaching é um processo de condução lógica e cognitiva
               que identifica inicialmente o Estado Atual através de uma
@@ -66,7 +67,7 @@
             </div>
           </div>
           <div class="row separados meio marginTopBottom">
-            <div>
+            <div class="flexitem-config">
               <h2 class="text-right" id="titulo_int">Integral</h2>
               <p class="text-center marginTop" id="desc_integral">Esta palavra significa a capacidade de mobilizar o hemisfério
                 esquerdo do cérebro (cognitivo, racional, lógico e intelectual
@@ -77,7 +78,7 @@
                 interconectados e trabalham em conjunto e seu papel de cada área
                  varia de acordo com a necessidade.</p>
             </div>
-            <div>
+            <div class="flexitem-config2">
               <h2 class="text-left" id="titulo_sis">Sistêmico</h2>
               <p class="text-center marginTop" id="desc_sistemico">Refere-se ao fato que cada individuo (corpo + alma + espirito)
                 fazem parte de um   sistema maior, formando por sistemas menores.
@@ -90,12 +91,12 @@
         </div>
       </div>
       <div class="section color-section grid" id="treinamento"> <!-- Área de chamada para treinamentos -->
-        <div class="central">
-          <div class="row marginTopBottom centralizado" id="">
-            <div class="">
-              <img src="#" alt="">
+        <div class="central flexcontainer-width">
+          <div class="row marginTopBottom centralizado">
+            <div class="flexitem-config">
+              <img src="https://picsum.photos/200/300" alt="">
             </div>
-            <div class="marginTopBottom" id="treinamento_content">
+            <div class="marginTopBottom flexitem-config" id="treinamento_content">
               <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno">
               <h2 id="titulo_chamada-treinamento">Um treinamento que vai mudar a sua vida</h2>
               <img src="<?php bloginfo('template_url')?>/img/adorno.png" alt="" class="adorno">
@@ -198,9 +199,9 @@
             <img src="<?php bloginfo('template_url')?>/img/adornoroxo.png" alt="" class="adorno">
             <h2 id="titulo_redes-sociais">Acompanhe Nossas Redes Sociais</h2>
             <div class="icones-redes">
-              <img src="#" alt="">
-              <img src="#" alt="">
-              <img src="#" alt="">
+              <img src="<?php bloginfo('template_url')?>/img/facebook.svg" alt="">
+              <img src="<?php bloginfo('template_url')?>/img/instagram.svg" alt="">
+              <img src="<?php bloginfo('template_url')?>/img/twitter.svg" alt="">
             </div>
           </div>
           <?php dynamic_sidebar('redes');?>
@@ -215,7 +216,7 @@
           </div>
           <div id="form-ebook">
             <?php $form_widget = new \MailPoet\Form\Widget();
-echo $form_widget->widget(array('form' => 1, 'form_type' => 'php'));?>
+              echo $form_widget->widget(array('form' => 1, 'form_type' => 'php'));?>
           </div>
         </div>
         <div class="menu-footer central grid">

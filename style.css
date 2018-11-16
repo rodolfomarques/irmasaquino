@@ -51,6 +51,17 @@ a {
 
 }
 
+@media (max-width: 1000px) {
+
+  .grid {
+
+      grid-template-columns: 1fr minmax(280px, 2fr) 1fr;
+  }
+
+}
+
+
+
 .grid-center {
 
   justify-items: center;
@@ -60,6 +71,13 @@ a {
 .row {
 
   display: flex;
+  flex-wrap: wrap;
+
+}
+
+.flexcontainer-coach{
+
+  width: 100%;
 
 }
 
@@ -137,7 +155,7 @@ a {
 #grid-body{
 
   display: grid;
-  grid-template-columns: 1fr minmax(400px, 7fr) 1fr;
+  grid-template-columns: 1fr minmax(280px, 7fr) 1fr;
 
 }
 
@@ -222,7 +240,6 @@ div#home img {
 
 #postagem-atual {
 
-  /* grid-column: 1 / 2; */
   grid-row: span 2;
   border-radius: 10px;
   color: white;
@@ -235,7 +252,6 @@ div#home img {
 
 .postagem {
 
-  /* grid-column: 2 / 3; */
   background: #000038;
   border-radius: 10px;
   color: white;
@@ -257,10 +273,10 @@ div#home img {
 
 div#grid-postagens div h3 {
 
-  font-size: 1.5em;
-  width: 30ch;
+  font-size: 1em;
   border-left: 3px solid var(--cor-amarelo);
   padding-left: 1em;
+  padding-top: 0.5em;
 }
 
 #link-visitar_blog {
@@ -292,14 +308,42 @@ div#grid-postagens div h3 {
 
 #desc_coach {
 
-  width: 80ch;
+  width: 100%;
+}
+
+.flexitem-config{
+
+  flex:1 1 250px;
+  margin-right: 30px;
+  padding-bottom: 20px;
+}
+
+.flexitem-config2{
+
+  flex:1 1 250px;
+  margin-left: 30px;
+}
+
+@media (max-width: 1200px) {
+
+  .flexitem-config{
+
+    margin-right: 0px;
+
+  }
+
+  .flexitem-config2{
+
+    margin-left: 0px;
+  }
+
 }
 
 
 #titulo_int {
 
   padding: 0.2em 1em;
-  margin-left: -350px;
+  /* margin-left: -350px; */
   background-color: var(--cor-lilas);
   color: white;
   border-radius: 0 5px 5px 0;
@@ -309,14 +353,14 @@ div#grid-postagens div h3 {
 
 #desc_integral {
 
-  width: 30ch;
+  width: 100%;
 
 }
 
 #titulo_sis {
 
   padding: 0.2em 1em;
-  margin-right: -350px;
+  /* margin-right: -350px; */
   background-color: var(--cor-azul);
   color: white;
   border-radius: 5px 0 0 5px;
@@ -326,11 +370,17 @@ div#grid-postagens div h3 {
 
 #desc_sistemico{
 
-  width: 30ch;
+  width:100%;
 }
 
 /* Estilizacao da chamada para treinamentos */
 
+div#treinamento div div.row.marginTopBottom.centralizado div.flexitem-config{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 #treinamento_content{
 
@@ -342,16 +392,23 @@ div#grid-postagens div h3 {
 
 }
 
+div.flexitem-config img {
+
+  align-self: center;
+  justify-self: center;
+
+}
+
 h2#titulo_chamada-treinamento{
 
-  width: 14ch;
+  width: 80%;
   text-align: center;
 
 }
 
 p#desc_chamada-treinamento {
 
-  width: 50ch;
+  width: 100%;
   text-align: justify;
 
 }
@@ -367,9 +424,9 @@ p#desc_chamada-treinamento {
 
 #perfil {
 
-  height: 500px;
+  height: 100%;
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-columns: 1fr minmax(300px, 2fr) minmax(300px, 2fr) 1fr;
   grid-auto-rows:100px auto;
   grid-template-areas:
   ". perfilKalina perfilCarla ."
@@ -383,6 +440,7 @@ p#desc_chamada-treinamento {
   grid-column: 1/3;
   grid-row: 1/3;
   z-index: 1;
+
 }
 
 #area_carla {
@@ -391,16 +449,17 @@ p#desc_chamada-treinamento {
   grid-column: 3/5;
   grid-row: 1/3;
   z-index: 1;
+
 }
 
 
 #perfil_kalina{
 
   grid-area: perfilKalina;
+  padding: 30px;
   z-index: 10;
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-columns: minmax(100px, 150px) minmax(150px, 1.5fr) 1fr;
   align-items: center;
 
 }
@@ -408,26 +467,22 @@ p#desc_chamada-treinamento {
 #nome-kalina {
 
   background-color: var(--cor-lilas);
-  height: 90%;
-  width: 80%;
-  grid-column: 2/4;
-  grid-row: 2/3;
+  grid-row: 2;
   z-index: 1;
-  justify-self: scratch;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-left: -30px;
+  padding: 10px 0;
 
 }
 
 img.img_perfil:nth-child(1) {
 
-  grid-column: 1/3;
-  grid-row: 1/4;
+  grid-column: 1;
+  grid-row: 2;
   z-index: 10;
-
 
 }
 
@@ -436,16 +491,18 @@ img.img_perfil:nth-child(1) {
   grid-area: descKalina;
   z-index: 10;
   margin-right: 2em;
+  padding-bottom: 30px;
 
 }
 
 #perfil_carla {
 
   grid-area: perfilCarla;
+  justify-self: center;
+  padding: 30px;
   z-index: 10;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-columns: 1fr minmax(150px, 1.5fr) minmax(100px, 150px);
   align-items: center;
 
 }
@@ -453,24 +510,21 @@ img.img_perfil:nth-child(1) {
 #nome-carla {
 
   background-color: var(--cor-azul);
-  height: 90%;
-  width: 80%;
-  grid-column: 2/4;
-  grid-row: 2/3;
+  grid-column: 2;
   z-index: 1;
-  justify-self: scratch;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-right: -30px;
+  padding: 10px 0;
 
 }
 
 img.img_perfil:nth-child(2) {
 
-  grid-column: 3/5;
-  grid-row: 1/4;
+  grid-column: 3;
   z-index: 10;
 
 }
@@ -479,14 +533,15 @@ img.img_perfil:nth-child(2) {
 
   grid-area: descCarla;
   z-index: 10;
-  margin-left: 5em;
+  padding-bottom: 30px;
+  justify-self: center;
+
 
 }
 
 .img_perfil {
 
-  width: 200px;
-  height: 200px;
+  width: 100%;
   border-radius: 50%;
 
 }
@@ -494,7 +549,8 @@ img.img_perfil:nth-child(2) {
 .nome_perfil {
 
   text-align: center;
-  width: 7ch;
+  font-size: 1em;
+  /* width: 7ch; */
   margin: 5px 0;
 }
 
@@ -502,6 +558,58 @@ img.img_perfil:nth-child(2) {
 
   width: 80%;
   text-align: justify;
+}
+
+@media (max-width: 1000px) {
+
+  #perfil {
+
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr minmax(300px, 4fr) 1fr;
+    grid-template-areas:
+    ". perfilKalina ."
+    ". descKalina ."
+    ". perfilCarla ."
+    ". descCarla ."
+  }
+
+  #area_kalina{
+
+
+    background-color: var(--cor-azul);
+    grid-column: 1/4;
+    grid-row: 1/3;
+    z-index: 1;
+  }
+
+  #desc_kalina {
+
+    z-index: 10;
+    margin-right: 0;
+  }
+
+  #area_carla {
+
+    background-color: var(--cor-lilas);
+    grid-column: 1/4;
+    grid-row: 3/5;
+    z-index: 1;
+  }
+
+  #desc_carla {
+
+    margin-left: 0;
+
+  }
+
+  .desc_perfil {
+
+    width: 100%;
+    text-align: center;
+
+  }
 }
 
 
@@ -519,8 +627,7 @@ img.img_perfil:nth-child(2) {
 #area_citacoes {
 
   display: grid;
-  grid-template-columns: 1fr 1fr 0.5fr .5fr 1fr 1fr;
-  grid-template-rows: 1fr auto 1fr;
+  grid-template-columns: 1fr 1fr repeat(2, minmax(200px, 0.5fr)) 1fr 1fr;
 
 }
 
@@ -619,25 +726,112 @@ div#citacao-direita p.autor {
 
 }
 
+@media (max-width: 1000px) {
+
+  #area_citacoes {
+
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  div#area_citacoes.section img {
+
+    display: none;
+  }
+
+  #area-esquerda {
+
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    background-color: var(--cor-azul);
+
+  }
+
+  #area-direita {
+
+    grid-column: 2;
+    grid-row: 1;
+    z-index: 1;
+    background-color: var(--cor-lilas);
+
+  }
+
+  #citacao-esquerda {
+
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 10;
+    color: white;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+
+  }
+
+  #citacao-direita {
+
+    grid-column: 2;
+    grid-row: 1;
+    z-index: 10;
+    color: white;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  #area-direita {
+
+    grid-column: 1;
+    grid-row: 2
+
+  }
+
+  #citacao-direita {
+
+    grid-column: 1;
+    grid-row: 2;
+
+  }
+
+}
+
 /* Estilizando as redes sociais */
 
 #redessociais {
 
   padding: 50px 0;
+  align-items: center;
 
 }
 
 #redes-container {
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
 }
 
 #chamada-redes {
 
+  flex: 1 1 260px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center ;
   justify-content: center;
@@ -653,12 +847,29 @@ div#citacao-direita p.autor {
 
 }
 
+div#redes-container.central div{
+
+  flex: 1 2 260px;
+}
+
+div#chamada-redes div.icones-redes{
+
+  flex: 1 1 70px;
+}
+
+div.icones-redes img {
+
+  width: 30px;
+  height: 30px;
+  padding-top: 10px;
+}
+
 /* Estilizaćao do footer!! */
 
 #footer-content {
 
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: minmax(160px, 1fr) 4fr;
   grid-template-rows: auto auto;
   grid-template-areas:
   "img chamada-ebook"
@@ -666,10 +877,11 @@ div#citacao-direita p.autor {
 
 }
 
+
 #img-ebook {
 
   grid-area: img;
-  width: 164px;
+  /* width: 164px; */
   height: 200px;
   align-self: center;
   justify-self: end;
@@ -679,6 +891,7 @@ div#citacao-direita p.autor {
 
 div#chamada-ebook {
 
+  grid-area: chamada-ebook;
   align-self: center;
   justify-self:center;
   display: flex;
@@ -706,7 +919,58 @@ div#chamada-ebook h2:nth-child(2){
 
 #form-ebook {
 
+  grid-area: form-ebook;
   justify-self: center;
+
+}
+
+@media (max-width: 1000px) {
+
+  #footer-content {
+
+    display: grid;
+    grid-template-columns:1fr minmax(300px, 2fr) 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+    ". img ."
+    ". chamada-ebook ."
+    ". form-ebook .";
+
+  }
+
+  #img-ebook {
+
+    justify-self: center;
+    padding: 20px 0;
+
+  }
+
+  div#chamada-ebook {
+
+    justify-self: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    align-items: center;
+
+  }
+
+  div#chamada-ebook h2:nth-child(1){
+
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+  }
+
+  div#chamada-ebook h2:nth-child(2){
+
+    width: 100%;
+    text-align: center;
+    border-top: 5px solid var(--cor-azul);
+    border-left: 0px solid var(--cor-azul);
+    padding: 1em 0;
+  }
 
 }
 
